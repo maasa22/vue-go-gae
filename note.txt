@@ -1,0 +1,12 @@
+requirements
+### initial install
+- xcode
+- homebrew(package manager of all lang?) 
+- nodebrew(package manager of node)
+- node, yarn, npm, vue, vue-cli...
+
+### command
+cd $ProjectPATH
+vue create client
+cd client
+- yarn serve (check in local - http://localhost:8080/)
