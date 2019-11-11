@@ -10,3 +10,8 @@ cd $ProjectPATH
 vue create client
 cd client
 - yarn serve (check in local - http://localhost:8080/)
+npm install axios --save
+-[coding]
+    - simplify vue.app & add button & axios with false api
+    - change console setting on package.json
+    - add .gitignore
