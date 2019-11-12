@@ -4,9 +4,10 @@ requirements
 - homebrew(package manager of all lang?)
 - nodebrew(package manager of node)
 - node, yarn, npm, vue, vue-cli...
-- gcp registration, gcloud, credit card registration
+- gcp registration, cloud skd,  gcloud, credit card registration
 
 ### command
+（vue local -> vue gae -> go local -> go gae）
 cd $ProjectPATH
 vue create client
 cd client
@@ -27,9 +28,31 @@ yarn build
 gcloud config set project vue-go-gcp-20191111
 dev_appserver.py app.yaml
     - https://cloud.google.com/sdk/gcloud/reference/app/
-    - どこにあるんや、こいつ。
+    - どこにあるんや、このpython。
+    - warmingが出ている模様。here are too many files in your application for changes in all of them to be monitored. You may have to restart the development server to see some changes to your files.
 [check]
     - ex.http://localhost:8080/
 gcloud app deploy
 [check]
     - gcloud app browse ex. https://vue-go-gcp-20191111.appspot.com
+    - delopy vue first, or URl may be weird
+$ have deployed client with vue
+cd $ProjectPATH
+mkdir server
+cd server
+[ coding ]
+    - create main.go, app.yaml(service: api)
+    - https://cloud.google.com/appengine/docs/standard/go112/building-app/?hl=ja
+fresh
+    - or go run main.go
+[check]
+    - http://localhost:8090/
+gcloud app deploy
+[ check ]
+    - gcloud app browse ex. https://api-dot-vue-go-gcp-20191111.appspot.com/
+
+
+
+go api deploy
+local vue & gcp go
+gcp vue & gcp go
