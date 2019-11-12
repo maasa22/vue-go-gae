@@ -50,9 +50,8 @@ fresh
 gcloud app deploy
 [ check ]
     - gcloud app browse ex. https://api-dot-vue-go-gcp-20191111.appspot.com/
-
-
-
-go api deploy
-local vue & gcp go
-gcp vue & gcp go
+[ coding ]
+    - allow CORS on main.go
+    - check that local vue & gcp go have successfully connected
+    - check that gae vue & gae go have succeessgullly connected
+    - Minimum Viable Product!

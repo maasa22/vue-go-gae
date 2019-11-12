@@ -22,8 +22,11 @@ export default {
   },
   methods: {
     get_todos: async function() {
-      let res = await axios.get("https://jsonplaceholder.typicode.com/todos/1");
-      // http://localhost:8080/api/todos"
+      // let res = await axios.get("https://jsonplaceholder.typicode.com/todos/1"); // dummy api on net
+      // let res = await axios.get("http://localhost:8090/"); // local go server
+      let res = await axios.get(
+        "https://api-dot-vue-go-gcp-20191111.appspot.com"
+      ); // server on gae
       this.todos = res.data;
       console.log(this.todos);
     }

@@ -26,6 +26,7 @@ func main() {
 
 // indexHandler responds to requests with our greeting.
 func indexHandler(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Access-Control-Allow-Origin", "*") //本来はallowするURLを指定とかすべきそう。
 	if r.URL.Path != "/" {
 		http.NotFound(w, r)
 		return
