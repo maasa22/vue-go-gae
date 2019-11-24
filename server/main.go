@@ -1,4 +1,4 @@
-
+//https://medium.com/the-andela-way/build-a-restful-json-api-with-golang-85a83420c9da
 package main
 
 import (
@@ -8,7 +8,7 @@ import (
 	"log"
 	"net/http"
 	"github.com/gorilla/handlers"
-
+	"os"
 	"github.com/gorilla/mux"
 )
 
@@ -111,6 +111,7 @@ func deleteEvent(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
+	// initEvents()
 	router := mux.NewRouter().StrictSlash(true)
 	router.HandleFunc("/", homeLink)
 	router.HandleFunc("/event", createEvent).Methods("POST")
@@ -127,5 +128,17 @@ func main() {
 
 	// start server listen
 	// with error handling
-	log.Fatal(http.ListenAndServe(":8090", handlers.CORS(originsOk, headersOk, methodsOk)(router)))
+
+	// [START setting_port]
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "8090"
+		log.Printf("Defaulting to port %s", port)
+	}
+
+	log.Printf("Listening on port %s", port)
+	if err := http.ListenAndServe(":"+port, handlers.CORS(originsOk, headersOk, methodsOk)(router)); err != nil {
+		log.Fatal(err)
+	}
+	// [END setting_port]
 }

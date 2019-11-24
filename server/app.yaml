@@ -1,2 +1,3 @@
 runtime: go112
 service: api
+default_expiration: "2m" #キャッシュを2分で削除？
