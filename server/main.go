@@ -53,7 +53,7 @@ func createEvent(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		fmt.Fprintf(w, "Kindly enter data with the event title and description only in order to update")
 	}
-	
+
 	json.Unmarshal(reqBody, &newEvent)
 	events = append(events, newEvent)
 	w.WriteHeader(http.StatusCreated)

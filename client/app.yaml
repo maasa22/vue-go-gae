@@ -1,7 +1,7 @@
 runtime: php55
 service: default #client
 threadsafe: true
-default_expiration: "2m" #キャッシュを2分で削除？
+# default_expiration: "2m" #キャッシュを2分で削除？
 
 handlers:
   - url: /

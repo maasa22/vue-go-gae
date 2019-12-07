@@ -49,7 +49,7 @@ export default {
     return {
       events: [],
       api_url: "http://localhost:8090",
-      //   "https://api-dot-vue-go-gcp-20191111.appspot.com"
+      // api_url: "https://api-dot-vue-go-gcp-20191111.appspot.com",
       idRead: "",
       idCreate: "",
       titleCreate: "",

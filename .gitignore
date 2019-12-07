@@ -1,1 +1,3 @@
-node_modules
+vue-go-gcp-20191111-1cbecbd8345e.json
+server/cloud_sql_proxy
+server/local_db/config.py
